@@ -1,11 +1,17 @@
-<h1>投稿一覧</h1>
+<div class="list-wrap">
+  <h1 class="index-heading">投稿一覧</h1>
 
-<% @lists.each do |list| %>
-
-  <p>タイトル</p>
-  <span><%= link_to list.title, list_path(list.id) %></span>
+  <% @lists.each do |list| %>
+    <div class="list-box">
+      
+      <div class="list-comment">
+        <span class="list-title"><%= link_to list.title, list_path(list.id) %></span>
+        <span class="list-body"><%= link_to list.body, list_path(list.id) %></span>
+      </div>
+      
+      <p>画像</p>
+      <%= image_tag list.image, size: "200x200" %>
+    </div>
+  <% end %>
   
-  <p>画像</p>
-  <%= image_tag list.image, size: "200x200" %>
-  
-<% end %>
+</div>
