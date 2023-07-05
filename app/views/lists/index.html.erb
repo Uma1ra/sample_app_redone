@@ -1,5 +1,6 @@
+<h2 class="index-heading">投稿一覧</h2>
+
 <div class="list-wrap">
-  <h1 class="index-heading">投稿一覧</h1>
 
   <% @lists.each do |list| %>
     <div class="list-box">
@@ -9,8 +10,10 @@
         <span class="list-body"><%= link_to list.body, list_path(list.id) %></span>
       </div>
       
-      <p>画像</p>
-      <%= image_tag list.image, size: "200x200" %>
+      <div class="list-image">
+        <%= image_tag list.image, size: "200x200" %>
+      </div>
+      
     </div>
   <% end %>
   
