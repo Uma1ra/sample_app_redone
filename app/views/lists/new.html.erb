@@ -9,6 +9,8 @@
     <% end %>
   </ul>
   
+  <div><%= flash[:notice] %></div>
+  
 <% end %>
 
 <%= form_with model: @list do |f| %>
